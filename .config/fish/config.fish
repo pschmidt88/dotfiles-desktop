@@ -1,0 +1,21 @@
+set fish_greeting
+
+set -x EDITOR nvim
+
+set -Ux GOPATH ~/Code
+set -Ux GOPRIVATE "dev.azure.com/finorun/*"
+
+if test -d ~/.local/bin
+  if not contains -- ~/.local/bin $PATH
+    set -p PATH ~/.local/bin
+  end
+end
+
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
+
+fundle plugin 'danhper/fish-ssh-agent'
+fundle init
+
+starship init fish | source
