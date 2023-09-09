@@ -1,7 +1,7 @@
 [
   {
-    "label": "TODO swaylock-effects: Lock",
-    "exec": "swaylock -f -c 000000",
+    "label": "Lock",
+    "exec": "swaylock -f",
     "icon": "/usr/share/nwg-bar/images/system-lock-screen.svg"
   },
   {
