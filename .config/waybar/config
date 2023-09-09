@@ -5,9 +5,9 @@
     "margin": "5 5 0 5",
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/language", "keyboard-state", "custom/pacman", "sway/mode"],
-    "modules-center": [],
-    "modules-right": ["pulseaudio", "custom/mem", "backlight", "battery", "tray", "clock", "custom/power"],
+    "modules-left": ["sway/workspaces", "sway/language", "keyboard-state", "sway/mode"],
+    "modules-center": [ "clock" ],
+    "modules-right": ["pulseaudio", "custom/mem", "backlight", "battery", "tray", "custom/power"],
 
 
     //***************************
@@ -16,16 +16,23 @@
 
     "sway/workspaces": {
         "disable-scroll": true,
+        "all-outputs": true,
         "persistent_workspaces": {
             "1": [],
             "2": []
         },
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰈹",
+            "2": " ",
+            "3": " "
+        }
     },
 
     "sway/language": {
-        "format": "{} ",
-	"min-length": 5,
-	"tooltip": false
+        "format": "{} ",
+    	"min-length": 5,
+	    "tooltip": false
     },
 
     "keyboard-state": {
@@ -69,22 +76,22 @@
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
+            "hands-free": "󰓃",
             "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["奄", "奔", "墳"]
+            "default": ["󰓃"]
         },
         "on-click": "pavucontrol",
         "min-length": 13,
     },
 
     "custom/mem": {
-        "format": "{} ",
+        "format": "{} 󰍛",
         "interval": 3,
         "exec": "free -h | awk '/Mem:/{printf $3}'",
-        "tooltip": false,
+        "tooltip": false
     },
 
     "temperature": {
