@@ -1,15 +1,17 @@
-@import "frappe.css";
+@import "mocha.css";
 
 * {
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: RobotoMono Nerd Font;
-    min-height: 20px;
+    font-size: 14px;
+    /* min-height: 20px; */
 }
 
-window#waybar {
-    background: transparent;
+#waybar {
+    background: @base;
+    color: @text;
 }
 
 window#waybar.hidden {
@@ -17,15 +19,20 @@ window#waybar.hidden {
 }
 
 #workspaces {
-    margin-right: 8px;
+    margin-left: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
     border-radius: 10px;
     transition: none;
-    background: @base;
+    background: @surface0;
 }
 
+#workspaces button.active {
+    color: @teal;
+}
 #workspaces button {
     transition: none;
-    color: @text;
+    color: @lavender;
     background: transparent;
     padding: 5px;
     font-size: 16px;
@@ -47,65 +54,56 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-    color: @sapphire;
+    color: @teal;
+    border-radius: 1rem;
+}
+
+#clock,
+#memory,
+#cpu,
+#pulseaudio,
+#keyboard-state,
+#language,
+#temperature,
+#custom-power,
+#network
+{
+    margin: 7px 7px 7px 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    transition: none;
+    color: @text;
+    background: @surface0;
+}
+
+#cpu {
+    color: @mauve;
+    /* padding-left: 0; */
+    margin-left: 0;
+    border-radius: 0 10 10 0;
+}
+
+#memory {
+    color: @mauve;
+    /* padding-right: 0; */
+    margin-right: 0;
+    border-radius: 10 0 0 10;
 }
 
 #language {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: @text;
-    background: #383c4a;
+    color: @maroon;
 }
 
-#keyboard-state {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
+#temperature {
+    color: @flamingo;
 }
 
-#custom-pacman {
-    padding-left: 16px;
-    padding-right: 8px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
-#custom-mail {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
+#network {
+    color: @rosewater;
 }
 
 #mode {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
-#clock {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;    
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
-#pulseaudio {
-    margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
@@ -119,76 +117,13 @@ window#waybar.hidden {
     color: #2a5c45;
 }
 
-#custom-mem {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
+#pulseaudio {
+    color: @sky;
 }
 
 #custom-power {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    background: @base;
-    color: @text;
-}
-
-#temperature {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
-}
-
-#backlight {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
-#battery {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
-#battery.charging {
-    color: #ffffff;
-    background-color: #26A65B;
-}
-
-#battery.warning:not(.charging) {
-    background-color: #ffbe61;
-    color: black;
-}
-
-#battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    background: @surface2;
+    font-size: 16px;
 }
 
 #tray {
