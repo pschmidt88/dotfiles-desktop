@@ -15,7 +15,4 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-fundle plugin 'danhper/fish-ssh-agent'
-fundle init
-
 starship init fish | source
