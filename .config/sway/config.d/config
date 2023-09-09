@@ -24,7 +24,6 @@ set $menu fuzzel
 output DP-1 mode 1920x1080@144.001Hz position 0,0
 output DP-1 bg ~/Pictures/Wallpapers/wallhaven-eomoew_1920x1080.png fill
 
-
 # Second screen horizontal
 output HDMI-A-1 mode 1920x1080@60Hz position 1920,0
 output HDMI-A-1 bg ~/Pictures/Wallpapers/wallhaven-eomoew_1920x1080.png fill
@@ -219,22 +218,4 @@ bindsym $mod+r mode "resize"
 
 bindsym Shift+Ctrl+Print exec grim -g "$(slurp)" - | swappy -f -
 
-gaps inner 2
-gaps outer 2
-
-default_border pixel 1
-
 exec autotiling
-
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-
-bar {
-    swaybar_command waybar
-}
-
-#exec waybar
-
-

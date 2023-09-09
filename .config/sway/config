@@ -6,5 +6,9 @@
 
 # xwayland disable
 
+# theme
+include $HOME/.config/sway/styles/catppuccin-mocha
+
 include /etc/sway/config.d/*
 include $HOME/.config/sway/config.d/*
+
