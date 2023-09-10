@@ -23,6 +23,7 @@ window#waybar.hidden {
     margin-left: 7px;
     margin-top: 7px;
     margin-bottom: 7px;
+    margin-right: 7px;
     border-radius: 10px;
     transition: none;
     background: @surface0;
@@ -30,7 +31,10 @@ window#waybar.hidden {
 
 #workspaces button.active {
     color: @teal;
+    border-top: 1px white;
+    border-bottom: 1px;
 }
+
 #workspaces button {
     transition: none;
     color: @lavender;
@@ -67,7 +71,8 @@ window#waybar.hidden {
 #language,
 #temperature,
 #custom-power,
-#network
+#network,
+#custom-launcher
 {
     margin: 7px 7px 7px 7px;
     padding-left: 10px;
@@ -76,6 +81,12 @@ window#waybar.hidden {
     transition: none;
     color: @text;
     background: @surface0;
+}
+
+#custom-launcher {
+    color: @blue;
+    font-size: 24px;
+    padding-right: 14px;
 }
 
 #cpu {
@@ -102,6 +113,10 @@ window#waybar.hidden {
 
 #network {
     color: @rosewater;
+}
+
+#clock {
+    color: @yellow;
 }
 
 #mode {

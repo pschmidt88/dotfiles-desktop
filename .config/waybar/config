@@ -5,7 +5,7 @@
     // "margin": "5 5 0 5",
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces",  "keyboard-state", "sway/mode"],
+    "modules-left": ["custom/launcher", "sway/workspaces", "mpris", "keyboard-state", "sway/mode"],
     "modules-center": [ "clock" ],
     "modules-right": ["pulseaudio", "temperature", "memory", "cpu", "network", "tray", "sway/language", "custom/power"],
 
@@ -28,6 +28,11 @@
             "3": " ",
             "6": "󰓇"
         }
+    },
+
+    "custom/launcher": {
+        "format": "󰣇",
+        "tooltip": false,
     },
 
     "sway/language": {
@@ -62,30 +67,28 @@
 
     "clock": {
         "timezone": "Europe/Berlin",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "format": "{:%Y-%m-%d %H:%M}"
+        "tooltip-format": "{:%Y-%m-%d}",
+        "format": "{:%A %b %d, %H:%M}",
+        "on-click": "firefox -new-tab https://calendar.google.com"
     },
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "reverse-scrolling": 1,
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "婢 {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "婢 ",
         "format-icons": {
             "headphone": "",
-            "hands-free": "󰓃",
+            "hands-free": "",
             "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["󰓃"]
+            "default": [""]
         },
-        "on-click": "pavucontrol",
-        "min-length": 13,
+        "on-click": "pavucontrol" 
     },
 
     "cpu": {
@@ -120,6 +123,14 @@
     "tray": {
         "icon-size": 16,
         "spacing": 0
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title} - {artist}",
+        "tooltip-format": "{title} - {artist} - {album}",
+        "player-icons": {
+            "spotify_player": "󰓇"
+        }
     },
 
     "custom/power": {
