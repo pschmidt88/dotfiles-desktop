@@ -19,14 +19,17 @@
         "all-outputs": true,
         "persistent_workspaces": {
             "1": [],
-            "2": []
+            "2": [],
         },
         "format": "{icon}",
         "format-icons": {
             "1": "󰈹",
             "2": " ",
             "3": " ",
-            "6": "󰓇"
+            "4": "󰒱",
+            "5": "󰘔",
+            "6": "󰓇",
+            "10": "󰠮"
         }
     },
 
@@ -111,13 +114,13 @@
         "tooltip": false,
     },
     "network": {
-        "interface": "enp39s0", // (Optional) To force the use of this interface
+        // "interface": "enp39s0", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         //"format-ethernet": "{ifname}: {ipaddr}/{cidr}",
         "format-ethernet": "󰈁 {ifname}",
         "format-linked": "󰈁 (No IP)",
         "format-disconnected": "No connection 󰈂",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
     },
 
     "tray": {

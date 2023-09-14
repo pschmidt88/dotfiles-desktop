@@ -1,3 +1,5 @@
+exec_always $HOME/.config/sway/scripts/import-gsettings
+
 # Gaps and borders
 gaps inner 0
 gaps outer 0

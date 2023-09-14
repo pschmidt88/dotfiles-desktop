@@ -2,6 +2,7 @@ set fish_greeting
 
 set -x EDITOR nvim
 
+set -Ux DOCKER_HOST unix://$XDG_RUNTIME_DIR/podman/podman.sock
 set -Ux GOPATH ~/Code
 set -Ux GOPRIVATE "dev.azure.com/finorun/*"
 

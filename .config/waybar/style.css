@@ -72,7 +72,8 @@ window#waybar.hidden {
 #temperature,
 #custom-power,
 #network,
-#custom-launcher
+#custom-launcher,
+#tray
 {
     margin: 7px 7px 7px 7px;
     padding-left: 10px;
@@ -117,6 +118,10 @@ window#waybar.hidden {
 
 #clock {
     color: @yellow;
+}
+
+#tray {
+    color: @green;
 }
 
 #mode {

@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export DOCKER_HOST:unix\x3a///run/user/1000/podman/podman\x2esock
 SETUVAR --export --path GOPATH:/home/rookian/Code
 SETUVAR --export GOPRIVATE:dev\x2eazure\x2ecom/finorun/\x2a
 SETUVAR --export WLR_NO_HARDWARE_CURSORS:1
