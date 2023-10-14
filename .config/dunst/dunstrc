@@ -1,7 +1,8 @@
 [global]
+follow = keyboard
 frame_color = "#89B4FA"
 separator_color= frame
-font = "Inconsolata Nerd Font"
+font = "Inconsolata Nerd Font 10"
 
 [urgency_low]
 background = "#1E1E2E"

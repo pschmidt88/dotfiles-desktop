@@ -1,1 +1,15 @@
-for_window [instance="battle.net.exe"] floating enable
+for_window {
+  [instance="battle.net.exe"] floating enable
+  [app_id="nm-connection-editor"] floating enable
+  [app_id="wdisplays"] floating enable
+  [instance="1password"] floating enable
+
+  [window_role="pop-up"] floating enable
+  [window_role="bubble"] floating enable
+  [window_role="dialog"] floating enable
+  [window_type="dialog"] floating enable
+
+  [title="(?:New Event)"] floating enable
+  [title="(?:Message Filters)"] floating enable
+}
+

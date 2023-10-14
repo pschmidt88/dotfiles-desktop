@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/launcher", "sway/workspaces", "mpris", "keyboard-state", "sway/mode"],
     "modules-center": [ "clock" ],
-    "modules-right": ["pulseaudio", "temperature", "memory", "cpu", "network", "tray", "sway/language", "custom/power"],
+    "modules-right": ["pulseaudio", "temperature", "memory", "cpu", "tray",  "battery", "sway/language", "custom/power"],
 
 
     //***************************
@@ -29,6 +29,7 @@
             "4": "󰒱",
             "5": "󰘔",
             "6": "󰓇",
+            "7": "󰻧",
             "10": "󰠮"
         }
     },
@@ -79,13 +80,13 @@
         // "scroll-step": 1, // %, can be a float
         "reverse-scrolling": 1,
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": "婢 ",
+        "format-bluetooth": "{icon} {volume}% ",
+        "format-bluetooth-muted": " {icon} ",
+        "format-muted": " muted",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
-            "headset": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
@@ -125,7 +126,7 @@
 
     "tray": {
         "icon-size": 16,
-        "spacing": 0
+        "spacing": 8
     },
 
     "mpris": {
@@ -133,13 +134,28 @@
         "tooltip-format": "{title} - {artist} - {album}",
         "player-icons": {
             "spotify_player": "󰓇"
-        }
+        },
+        "max-length": 50
     },
 
     "custom/power": {
         "format": "󰐥",
        	"on-click": "nwg-bar",
       	"tooltip": false,
+     },
+
+     "battery": {
+        "format": "{capacity}% {icon} ",
+        "states": {
+            "critical": 10,
+            "warning": 25,
+            "ok": 50,
+            "good": 80,
+            "full": 100
+        },
+        "format-icons": [
+            "", "", "", "", ""
+        ]
      }
 }
 
